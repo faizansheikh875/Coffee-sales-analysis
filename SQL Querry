@@ -1,0 +1,9 @@
+SELECT * FROM index_1;
+select count(*) from index_1;
+select count(coffee_name),coffee_name from index_1 group by coffee_name order by count(coffee_name) desc;
+SELECT cash_type, COUNT(*) AS total,
+ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM index_1), 2) AS percentage
+FROM index_1
+GROUP BY cash_type;
+select * from index_1 where date between '01-03-2024' AND '31-03-2024';
+select sum(money) from index_1;
